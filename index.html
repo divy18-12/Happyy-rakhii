@@ -43,18 +43,14 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
-    /* Hide YouTube iframe */
-    #ytplayer {
+    iframe {
       display: none;
     }
   </style>
 </head>
 <body>
 
-<!-- Hidden YouTube Player -->
-<iframe id="ytplayer" width="0" height="0"
-  src="https://www.youtube.com/embed/sR_mk_gupgw?autoplay=0&loop=1&playlist=sR_mk_gupgw"
-  frameborder="0" allow="autoplay"></iframe>
+<iframe id="bgm" src="" allow="autoplay"></iframe>
 
 <div id="tap" onclick="showMessage()">
   🎁 Tap to open your Rakhi message, Jyoti Dii 💖
@@ -73,10 +69,7 @@
   function showMessage() {
     document.getElementById("tap").style.display = "none";
     document.getElementById("message").style.display = "block";
-    
-    // Enable YouTube autoplay
-    const yt = document.getElementById("ytplayer");
-    yt.src = yt.src.replace("autoplay=0", "autoplay=1");
+    document.getElementById("bgm").src = "https://www.youtube.com/embed/4RBIwnM0ulk?autoplay=1&loop=1&playlist=4RBIwnM0ulk";
   }
 </script>
 
