@@ -25,6 +25,7 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
       cursor: pointer;
       transition: transform 0.3s ease;
+      z-index: 2;
     }
 
     #tap:hover {
@@ -41,16 +42,27 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      z-index: 2;
     }
 
-    iframe {
-      display: none;
+    /* Hidden YouTube iframe */
+    #bgm {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 0;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
 
-<iframe id="bgm" src="" allow="autoplay"></iframe>
+<!-- Hidden YouTube Player -->
+<iframe 
+  id="bgm" 
+  src="" 
+  allow="autoplay"
+></iframe>
 
 <div id="tap" onclick="showMessage()">
   🎁 Tap to open your Rakhi message, Jyoti Dii 💖
@@ -69,7 +81,8 @@
   function showMessage() {
     document.getElementById("tap").style.display = "none";
     document.getElementById("message").style.display = "block";
-    document.getElementById("bgm").src = "https://www.youtube.com/embed/4RBIwnM0ulk?autoplay=1&loop=1&playlist=4RBIwnM0ulk";
+    // Start YouTube video from 2 seconds, loop enabled
+    document.getElementById("bgm").src = "https://www.youtube.com/embed/4RBIwnM0ulk?start=2&autoplay=1&loop=1&playlist=4RBIwnM0ulk";
   }
 </script>
 
