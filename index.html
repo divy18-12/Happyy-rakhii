@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Rakhi Dii ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.postimg.cc/rpPjgQGx/Whats-App-Image-2025-08-08-at-11-06-53-PM.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    #tap {
+      background: rgba(255,255,255,0.85);
+      padding: 20px 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #tap:hover {
+      transform: scale(1.05);
+    }
+
+    #message {
+      display: none;
+      font-size: 1.1rem;
+      max-width: 600px;
+      line-height: 1.6;
+      text-align: center;
+      background-color: rgba(255,255,255,0.9);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    /* Hide YouTube iframe */
+    #ytplayer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hidden YouTube Player -->
+<iframe id="ytplayer" width="0" height="0"
+  src="https://www.youtube.com/embed/sR_mk_gupgw?autoplay=0&loop=1&playlist=sR_mk_gupgw"
+  frameborder="0" allow="autoplay"></iframe>
+
+<div id="tap" onclick="showMessage()">
+  🎁 Tap to open your Rakhi message, Jyoti Dii 💖
+</div>
+
+<div id="message">
+  <p><strong>Happy Raksha Bandhan to the sweetest, most supportive, kind, and beautiful sister.</strong><br><br>
+  You are not just my sister — you are a part of my soul, my safe place, and my greatest blessing. I can’t even imagine my life without you, especially in this phase where your love and support mean the world to me.<br><br>
+  You have stood by me in ways words can’t describe, helped me more than I could ever imagine, and filled my life with laughter, comfort, and strength. Every call, every talk, every moment I spent this year with you was my greatest feeling ever. Thankkkk youuu for being exactly who you are — pure, genuine, and irreplaceable.<br><br>
+  I pray that your life is always filled with happiness, good health, and all your dreams come true. You are my forever best friend, my protector, and my pride.<br><br>
+  <strong>I’m blessed to have you in my lifeeee. Once again, Happy Rakhi, Diiii 🥰💞❤️</strong>
+  </p>
+</div>
+
+<script>
+  function showMessage() {
+    document.getElementById("tap").style.display = "none";
+    document.getElementById("message").style.display = "block";
+    
+    // Enable YouTube autoplay
+    const yt = document.getElementById("ytplayer");
+    yt.src = yt.src.replace("autoplay=0", "autoplay=1");
+  }
+</script>
+
+</body>
+</html>
