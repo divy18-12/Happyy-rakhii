@@ -8,15 +8,20 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Full-screen container for tap screen */
+    #tap-screen {
       background: url('https://i.postimg.cc/rpPjgQGx/Whats-App-Image-2025-08-08-at-11-06-53-PM.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: 'Segoe UI', sans-serif;
     }
 
+    /* Tap button */
     #tap {
       background: rgba(255,255,255,0.85);
       padding: 20px 30px;
@@ -32,8 +37,17 @@
       transform: scale(1.05);
     }
 
-    #message {
+    /* Message screen */
+    #message-screen {
+      background: url('https://i.postimg.cc/rpPjgQGx/Whats-App-Image-2025-08-08-at-11-06-53-PM.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #message {
       font-size: 1.1rem;
       max-width: 600px;
       line-height: 1.6;
@@ -58,30 +72,31 @@
 <body>
 
 <!-- Hidden YouTube Player -->
-<iframe 
-  id="bgm" 
-  src="" 
-  allow="autoplay"
-></iframe>
+<iframe id="bgm" src="" allow="autoplay"></iframe>
 
-<div id="tap" onclick="showMessage()">
-  🎁 Tap to open your Rakhi message, Jyoti Dii 💖
+<!-- Tap Screen -->
+<div id="tap-screen">
+  <div id="tap" onclick="showMessage()">
+    🎁 Tap to open your Rakhi message, Jyoti Dii 💖
+  </div>
 </div>
 
-<div id="message">
-  <p><strong>Happy Raksha Bandhan to the sweetest, most supportive, kind, and beautiful sister.</strong><br><br>
-  You are not just my sister — you are a part of my soul, my safe place, and my greatest blessing. I can’t even imagine my life without you, especially in this phase where your love and support mean the world to me.<br><br>
-  You have stood by me in ways words can’t describe, helped me more than I could ever imagine, and filled my life with laughter, comfort, and strength. Every call, every talk, every moment I spent this year with you was my greatest feeling ever. Thankkkk youuu for being exactly who you are — pure, genuine, and irreplaceable.<br><br>
-  I pray that your life is always filled with happiness, good health, and all your dreams come true. You are my forever best friend, my protector, and my pride.<br><br>
-  <strong>I’m blessed to have you in my lifeeee. Once again, Happy Rakhi, Diiii 🥰💞❤️</strong>
-  </p>
+<!-- Message Screen -->
+<div id="message-screen">
+  <div id="message">
+    <p><strong>Happy Raksha Bandhan to the sweetest, most supportive, kind, and beautiful sister.</strong><br><br>
+    You are not just my sister — you are a part of my soul, my safe place, and my greatest blessing. I can’t even imagine my life without you, especially in this phase where your love and support mean the world to me.<br><br>
+    You have stood by me in ways words can’t describe, helped me more than I could ever imagine, and filled my life with laughter, comfort, and strength. Every call, every talk, every moment I spent this year with you was my greatest feeling ever. Thankkkk youuu for being exactly who you are — pure, genuine, and irreplaceable.<br><br>
+    I pray that your life is always filled with happiness, good health, and all your dreams come true. You are my forever best friend, my protector, and my pride.<br><br>
+    <strong>I’m blessed to have you in my lifeeee. Once again, Happy Rakhi, Diiii 🥰💞❤️</strong>
+    </p>
+  </div>
 </div>
 
 <script>
   function showMessage() {
-    document.getElementById("tap").style.display = "none";
-    document.getElementById("message").style.display = "block";
-    // Start YouTube video from 2 seconds, loop enabled
+    document.getElementById("tap-screen").style.display = "none";
+    document.getElementById("message-screen").style.display = "flex";
     document.getElementById("bgm").src = "https://www.youtube.com/embed/4RBIwnM0ulk?start=2&autoplay=1&loop=1&playlist=4RBIwnM0ulk";
   }
 </script>
